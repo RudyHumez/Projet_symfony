@@ -13,21 +13,24 @@
         <div class="content text-justify">
             <p class="date">
                 Ecrit le
-                        
+                                        
+                                
                 {{ article.createdAt | date("d/m/Y") }}
                 à
-                        
+                                        
+                                
                 {{ article.createdAt | date("H:i") }}
                 <br/>
                 Par
-                        
+                                        
+                                
                 {{ article.author }}
             </p>
             <h5 class="title">
                 {{ article.title }}
             </h5>
             <p class="content">
-                {{ article.content }}
+                {{ article.content | raw }}
             </p>
         </div>
     </div>
