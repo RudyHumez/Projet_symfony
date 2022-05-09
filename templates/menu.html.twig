@@ -1,9 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">
-        Navbar         
-                                    
-                            
-                    
+        Blog Afpa           
             
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -13,14 +10,10 @@
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
                 <a class="nav-link" href="{{ path('home') }}">
-                    Accueil                                                                
-                                                                                
-                                                            
+                    Accueil                                                                                                
                                         
                     <span class="sr-only">
-                        (current)                                                                              
-                                                                                            
-                                                                    
+                        (current)                                                                                                                        
                                             
                     </span>
                 </a>
@@ -30,23 +23,22 @@
             {% if app.user %}
                 <li>
                     <a href="{{ path('security_logout') }}" class="btn btn-danger ml-3">
-                        Déconnexion
+                        Déconnexion                                                                                                         
                                             
                     </a>
                 </li>
             {% else %}
                 <li>
                     <a href="{{ path('security_register', {user_type:" user"}) }}" class="btn btn-success">
-                        Inscription 
+                        Inscription                                         
+                                            
                     </a>
-                    Inscription
-                                        
                 </a>
             </li>
             <li>
                 <a href="{{ path('security_login') }}" class="btn btn-info ml-3">
-                    Connexion
-                                        
+                    Connexion                                 
+                                    
                 </a>
             </li>
         {% endif %}
@@ -55,10 +47,12 @@
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
                 Search                                       
-                                                                                                
-                                                                        
-                                                    
-                                
+                                                                                                                                
+                                                                                                        
+                                                                                    
+                                                                
+                                            
+                            
             </button>
         </form>
     </div>

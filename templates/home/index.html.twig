@@ -2,6 +2,7 @@
 
 {% block title %}
     Liste des articles
+        
     
 {% endblock %}
 
@@ -12,6 +13,7 @@
                 <div class="row">
                     <h1 class="text-center ml-3 mt-5">
                         Liste des articles
+                                            
                     </h1>
                 </div>
                 <div class="row">
@@ -21,14 +23,17 @@
                                 <div class="card-body">
                                     <p class="date">
                                         Ecrit le
-                                                                            
+                                                                                                                    
+                                                                                
                                         {{ article.createdAt | date("d/m/Y") }}
                                         à
-                                                                            
+                                                                                                                    
+                                                                                
                                         {{ article.createdAt | date("H:i") }}
                                         <br/>
                                         Par
-                                                                            
+                                                                                                                    
+                                                                                
                                         {{ article.author }}
                                     </p>
                                     <h5 class="card-title">
@@ -36,10 +41,15 @@
                                     </h5>
                                     <a href="{{ path('show', {id : article.id}) }}" class="btn btn-primary">
                                         Lire >>
+                                                                            
                                     </a>
                                 </div>
                             </div>
                         {% endfor %}
+
+                        <div class="ml-3">
+                            {{ knp_pagination_render(articles, '@KnpPaginator/Pagination/twitter_bootstrap_v4_pagination.html.twig') }}
+                        </div>
                     </div>
                 </div>
 
@@ -47,6 +57,7 @@
                     <div class="row">
                         <h2 class="h1 mb-4 mt-5">
                             Categories
+                                                    
                         </h2>
                     </div>
                     <div class="row">
